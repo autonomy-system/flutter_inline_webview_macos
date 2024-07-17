@@ -30,8 +30,8 @@ class InlineWebViewMacOsController {
 
   Future<void> _init() async {
     _channel.invokeMethod<bool>('create', {
-      'height': _size.height.round(),
-      "width": _size.width.round(),
+      'height': _size.height,
+      "width": _size.width,
     });
 
     //  this.ios = IOSInAppWebViewController(channel: _channel);
@@ -40,8 +40,8 @@ class InlineWebViewMacOsController {
   void changeSize(Size size) {
     _size = size;
     _channel.invokeMethod<void>('changeSize', {
-      'height': _size.height.round(),
-      "width": _size.width.round(),
+      'height': _size.height,
+      "width": _size.width,
     });
   }
 

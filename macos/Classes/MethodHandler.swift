@@ -86,6 +86,7 @@ public class InAppWebViewMacosMethodHandler: FlutterMethodCallDelegate {
   }
 
   public func dispose() {
+      controller?.dispose()
       controller = nil
   }
 
